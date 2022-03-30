@@ -1,4 +1,18 @@
-## project log
+## Feautures
+
+- theme switching (dark/lite)
+- language switching (eng/ru)
+- github API connect
+- card view
+
+## Technologies
+
+- build tool: Vite
+- package manager: Yarn
+- languages: JavaScript, Typescript, HTML, CSS
+- libs: React, Redux Toolkit
+
+## Project log
 
 - `yarn create vite` (choose `react-ts template`)
 - `corepack enable`
