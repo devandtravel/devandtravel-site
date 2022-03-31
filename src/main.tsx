@@ -1,9 +1,12 @@
 import './index.css'
 
-import React from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 
-import App from './App'
+import { store } from './store/store'
+import { ThemedApp } from './ThemedApp'
 
 const container = document.getElementById('app')
 if (!container) {
@@ -11,7 +14,11 @@ if (!container) {
 }
 const root = createRoot(container)
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ThemedApp />
+      </BrowserRouter>
+    </Provider>
+  </StrictMode>
 )
